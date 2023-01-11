@@ -1,0 +1,13 @@
+Car
+Skoda
+5
+model1
+2970.67
+model2
+9203.95
+model3
+1311.79
+model4
+9555.82
+model5
+8958.8
