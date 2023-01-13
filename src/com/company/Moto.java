@@ -52,7 +52,7 @@ public class Moto implements ITransport, Serializable {
 
     private int size;
 
-    private long lastModified;
+    private transient long lastModified;
 
     {
         this.lastModified = System.currentTimeMillis();

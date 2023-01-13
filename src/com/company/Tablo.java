@@ -50,9 +50,6 @@ public class Tablo {
     }
 
 
-
-
-
     public static void printModels(ITransport ITransport) {
         for (String str : ITransport.getArrayModelsNames()) {
             System.out.println(str);
@@ -64,6 +61,7 @@ public class Tablo {
             System.out.println(AllPrices);
         }
     }
+
     public static void outputVehicle(ITransport v, OutputStream out) throws IOException {
         DataOutputStream dos = new DataOutputStream(out);
         dos.writeUTF(v.getClass().getName());
@@ -135,57 +133,4 @@ public class Tablo {
         }
         return vehicle;
     }
-
-//    public static ITransport setVehicle(String mark, int sizeModelArray, ITransport ITransport) {
-//
-//        return ITransport;
-//    }
-//    // через getAverageprice никакого HashMap
-//    public static double getVehicleAveragePrices(ITransport...ITransports) {
-//        double result = 0;
-//        for (ITransport ITransport : ITransports) {
-//            result+=getAvgPrice(ITransport);
-//        }
-//        return result;
-//    }
-//    public static ITransport createVehicle (ITransport ITransport, String mark, int size){
-//        try{
-//            Class<? extends ITransport> cl = ITransport.getClass();
-//            Class<?>[] params = new Class[]{String.class,int.class};
-//            return cl.getConstructor(params).newInstance(mark,size);
-//        } catch (Exception ignored) {
-//        }
-//        return null;
-//    }
-//    public static void writesVehicle (ITransport ITransport, Writer out) throws IOException{
-//        PrintWriter printWriter = new PrintWriter(out);
-//        printWriter.printf("%s\n",ITransport.getClass().getName());
-//        printWriter.printf("%s\n",ITransport.getMark());
-//        int lenght = ITransport.getSizeModelArray();
-//        printWriter.printf("%s\n",lenght);
-//        try {
-//            for (int i = 0; i < lenght; i++) {
-//                printWriter.printf("%s\n",ITransport.getArrayModelsNames()[i]);
-//                printWriter.printf("%s\n",ITransport.getArrayModelsPrice()[i]);
-//            }
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }printWriter.flush();
-//    }
-//    public static ITransport readsVehicle (Reader in) throws IOException, DuplicateModelNameException, NoSuchModelNameException {
-//        Scanner scanner = new Scanner(in);
-//        System.out.println("Введите что надо: ");
-//        String string1 = scanner.nextLine();
-//        String string2 = scanner.nextLine();
-//        ITransport result = null;
-//        int lenght = scanner.nextInt();
-//        if (string1.equals("auto"))
-//            result = new Car(string2,0);
-//        else result = new Moto(string2,0);
-//        for (int i = 0; i < lenght; i++) {
-//            result.addModelNameAndModelPrice(scanner.nextLine(),Double.parseDouble(scanner.nextLine()));
-//            System.out.println(result);
-//            in.close();
-//        } return result;
-//    }
 }
