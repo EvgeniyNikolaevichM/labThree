@@ -85,9 +85,9 @@ public class Tablo {
         String cl = dis.readUTF();
         String mark = dis.readUTF();
         int len = dis.readInt();
-        if (cl.equals("Car"))
-            res = new Car(mark, 0);
-        else res = new Moto(mark, 0);
+        if (cl.equals("Moto"))
+            res = new Moto(mark, 0);
+        else res = new Car(mark, 0);
         for (int i = 0; i < len; i++) {
             res.addModelNameAndModelPrice(dis.readUTF(), dis.readDouble());
         }
@@ -120,9 +120,9 @@ public class Tablo {
             int count = Integer.parseInt(bufferedReader.readLine());
             String[] models = new String[count];
             double[] prices = new double[count];
-            if (cl.equals("Car"))
-                vehicle = new Car(mark, 0);
-            else vehicle = new Moto(mark, 0);
+            if (cl.equals("Moto"))
+                vehicle = new Moto(mark, 0);
+            else vehicle = new Car(mark, 0);
             for (int i = 0; i < count; i++) {
                 models[i] = bufferedReader.readLine();
                 prices[i] = Double.parseDouble(bufferedReader.readLine());

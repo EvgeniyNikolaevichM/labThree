@@ -249,46 +249,14 @@ public class Main {
 //            System.out.println(motor);
 //            ois.close();
 
-            System.out.println("=====in console write: Class, Mark, Len, Models, Price=====");
-            ITransport transportConsole =  Tablo.readVehicle(new InputStreamReader(System.in));
-            System.out.println("=====You add:=====");
-            Tablo.writeVehicle((ITransport) transportConsole, new OutputStreamWriter(System.out));
-            System.out.println("=====Check add:=====");
-            showTransport(transportConsole);
+//            System.out.println("=====in console write: Class, Mark, Len, Models, Price=====");
+//            ITransport transportConsole =  Tablo.readVehicle(new InputStreamReader(System.in));
+//            System.out.println("=====You add:=====");
+//            Tablo.writeVehicle((ITransport) transportConsole, new OutputStreamWriter(System.out));
 
-//        System.out.println("Write Car or moto");
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        String nameOfClass = reader.readLine();
-//        System.out.println("Write model");
-//        String nameOfModel = reader.readLine();
-//        System.out.println("Write num model");
-//        int numberOfModel = Integer.parseInt(reader.readLine());
-//        ITransport Car = null;
-//        if (Objects.equals(nameOfClass, "Car"))
-//            Car = new Car(nameOfModel, numberOfModel);
-//        else Car = new Moto(nameOfModel,numberOfModel);
-//        System.out.println("Len: = " + Car.getSizeModelArray());
-//        System.out.println("Models:");
-//        Tablo.printModels(Car);
-//        System.out.println("Price:");
-//        Tablo.printPrices(Car);
+//            System.out.println("=====Check add:=====");
+//            showTransport(transportConsole);
 
-//        System.out.println(Car.equals(Car3));
-
-//        ITransport vehicleres = Tablo.readVehicle(new InputStreamReader(System.in));
-//        Tablo.writeVehicle(vehicleres,new OutputStreamWriter(System.out));
-//        Path path = Paths.get("cars.dat");
-//        try (ObjectOutputStream oos = new ObjectOutputStream(
-//                Files.newOutputStream(path))) {
-//            ITransport Car4 = new Car("Lamba", 3);
-//            oos.writeObject(Car3);
-//            System.out.println("Create vehicle "+"\n" + Car3);
-//        }
-//        try (ObjectInputStream ois = new ObjectInputStream(
-//                Files.newInputStream(path))) {
-//            ITransport read = (Car) ois.readObject();
-//            System.out.printf("Read vehicle: %s", read);
-//        }
 
         } catch (Exception e) {
             System.err.println("Exception: " + e);
